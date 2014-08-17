@@ -9,7 +9,7 @@ class SublimeText2Plugin implements Plugin<Project> {
     def extension = new SublimeText2PluginExtension(project)
     project.extensions.sublimeText = extension
 
-    project.tasks.add("sublimeText", SublimeText2Task)
+    project.tasks.create("sublimeText", SublimeText2Task)
     project.tasks.withType(SublimeText2Task) {
       conventionMapping.sublimeProjectName = {
         project.hasProperty("sublimeProjectName") ? project.property("sublimeProjectName")
