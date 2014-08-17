@@ -1,3 +1,4 @@
+# fork of SublimeText plugin for Gradle that works with gradle 2. 
 # sublimeText Plugin for Gradle
 The sublimeText plugin allows gradle to create a Sublime Text 2 project file.
 

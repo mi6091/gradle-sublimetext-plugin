@@ -1,4 +1,7 @@
 #gradle-sublimetext-plugin Release Notes
+##0.5.3 (2014-08-17)
+
+Build for gradle 2 
 
 ##0.5.1 (2013-05-16)
 
