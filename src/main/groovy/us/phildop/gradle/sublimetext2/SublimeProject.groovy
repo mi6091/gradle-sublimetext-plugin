@@ -125,8 +125,6 @@ public class SublimeProject {
       srcpathEntries.join(File.pathSeparator),
       "-classpath",
       classpathEntries.join(File.pathSeparator),
-      "-Xlint:all",
-      "{filename}"
     ]
   }
 
@@ -152,14 +150,17 @@ public class SublimeProject {
             sublimejava_srcpath srcpathEntries
           }
 
+          }
+
           if (addSublimeLinterConfig) {
             "SublimeLinter" {
-              "Java" {
-                working_directory mainProject.projectDir.toString()
-
-                lint_args sublimeLinterArgs
+              "linters" {
+                "javac" {
+                  working_directory mainProject.projectDir.toString()
+                  args sublimeLinterArgs
+                  lint "all"
+                }
               }
-            }
           }
 
           if (eclipseJavaFormatterConfigFile != null) {
